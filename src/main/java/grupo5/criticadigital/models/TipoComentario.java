@@ -15,8 +15,8 @@ public class TipoComentario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id_Comentario;
+    private Long IdComentario;
 
     @NotNull
-    private String Tipo_Comentaro;
+    private String TipoComentaro;
 }
