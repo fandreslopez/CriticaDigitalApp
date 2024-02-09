@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Size;
+import java.util.ArrayList;
 import java.util.Date;
 
 @Entity
@@ -15,20 +16,28 @@ public class Usuarios {
     private Long usuarioId;
 
     @Size(max = 10)
-    private String rutUsuario;
+    private String rut;
 
-    private String nombreUsuario;
+    private String nombre;
 
-    private String apellidoUsuario;
+    private String apellido;
 
     private Date fechaNacimiento;
 
     @Email(message = "No se introdujo un correo válido")
-    private String correoUsuario;
+    private String correo;
 
-    private String nickUsuario;
+    private String nickname;
 
     @Size(min = 8)
     private String password;
+
+    @ManyToOne
+    @JoinColumn(name = "genero")
+    private Generos generoUsuario;
+
+    @ManyToOne
+    @JoinColumn(name = "tipo_usuario")
+    private TiposUsuario tipoUsuario;
 
 }
