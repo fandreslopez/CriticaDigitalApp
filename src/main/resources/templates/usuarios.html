@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Usuarios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body class="text-center">
+    <div class="container">
+        <h1 class="d-flex mt-5">Lista de usuarios</h1>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Nickname</th>
+                <th scope="col">Genero</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Borrar</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr scope="row" th:each="usuario:${usuarios}">
+                    <td th:text="${usuario.usuarioId}"></td>
+                    <td th:text="${usuario.nombre}"></td>
+                    <td th:text="${usuario.apellido}"></td>
+                    <td th:text="${usuario.nickname}"></td>
+                    <td th:text="${usuario.generoUsuario.getGeneroValor()}"></td>
+                    <td th:text="${usuario.tipoUsuario.getTipoUsuarioValor()}"></td>
+                    <td th:text="${usuario.correo}"></td>
+                    <td>
+                        <a th:href="@{'/usuarios/editar/' + ${usuario.usuarioId}}" class="btn btn-success">Editar</a>
+                    </td>
+                    <td>
+                        <form th:action="@{'/usuarios/borrar/' + ${usuario.usuarioId}}" method="post">
+                            <button type="submit">Borrar</button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a th:href="@{/usuarios/formulario}" class="btn btn-dark">Crear empleado</a>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
