@@ -1,7 +1,7 @@
 package grupo5.criticadigital.services;
 
 import grupo5.criticadigital.models.Usuarios;
-import grupo5.criticadigital.repositorys.UsuariosRepository;
+import grupo5.criticadigital.repositories.UsuariosRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

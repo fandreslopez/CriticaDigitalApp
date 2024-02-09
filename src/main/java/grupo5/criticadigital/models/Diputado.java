@@ -14,9 +14,9 @@ public class Diputado {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idDiputado;
 
-    private String Nombres;
+    private String nombres;
 
-    private String Apellidos;
+    private String apellidos;
 
     @DateTimeFormat(pattern = "dd-MM-yyyy")
     private Date fechaDeNacimiento;
