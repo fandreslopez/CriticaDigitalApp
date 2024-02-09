@@ -1,38 +1,56 @@
 package grupo5.criticadigital.services;
 
 import grupo5.criticadigital.models.Usuarios;
-import grupo5.criticadigital.repositorys.UsuariosRepository;
+import grupo5.criticadigital.repositories.UsuariosRepository;
 import jakarta.transaction.Transactional;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
+
 import org.springframework.stereotype.Service;
 
+import javax.validation.constraints.Null;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @Transactional
-public class UsuariosServicesImpl implements UsuariosServices{
+@AllArgsConstructor
+public class UsuariosServicesImpl implements UsuariosServices {
 
-    @Autowired
     private UsuariosRepository usuariosRepository;
 
     @Override
     public List<Usuarios> obtenerUsuarios() {
-        return null;
+        return usuariosRepository.findAll();
     }
 
     @Override
-    public Optional<Usuarios> obtenerUsuarioPorId(Long id) {
-        return Optional.empty();
+    public Usuarios usuarioPorId(Long id) {
+        return usuariosRepository.findById(id).get();
     }
 
     @Override
-    public Usuarios guardarUsuario(Usuarios usuario) {
-        return null;
+    public Usuarios editarUsuarioPorId(Usuarios usuarioParaEditar, Long id) {
+        Usuarios usuarioSeleccionado = usuariosRepository.findById(id).get();
+        return usuariosRepository.save(usuarioParaEditar);
     }
 
+    @Override
+    public Usuarios guardarUsuario(Usuarios usuario){
+        if (usuario != null) {
+            return usuariosRepository.save(usuario);
+        } else return null;
+    }
+
+    /* public Empleado guardarEmpleado(Empleado empleadoParaGuardar) {
+        Boolean empleadoExiste = empleadoRepository.existsById(empleadoParaGuardar.getEmpleadoId());
+        //Agrego validaciones antes de guardar al empleado
+        if (!(empleadoExiste) && empleadoParaGuardar.getAniosAntiguedad() > 1) {
+            return empleadoRepository.save(empleadoParaGuardar);
+        } else {
+            return null;
+        }
+    } */
     @Override
     public void eliminarUsuario(Long id) {
-
+        usuariosRepository.deleteById(id);
     }
 }
