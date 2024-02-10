@@ -24,7 +24,7 @@ public class Likes{
 
     @ManyToOne
     @JoinColumn(name = "idDiputado")
-    private Diputados diputadoLike;
+    private Diputado diputadoLike;
 
 
 }
