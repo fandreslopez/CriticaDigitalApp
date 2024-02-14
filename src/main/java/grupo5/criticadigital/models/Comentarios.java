@@ -17,7 +17,7 @@ public class Comentarios {
     private Date fechaPublicacion;
 
     @ManyToOne//Indico que hay una relacion de Muchos a uno, desde el empleado
-    @JoinColumn(name = "usuario_id")//Indicamos el nombre de la columna que lleva la llave foránea
+    @JoinColumn(name = "usuarioId")//Indicamos el nombre de la columna que lleva la llave foránea
     private Usuarios usuarioComentario;
 
     @ManyToOne//Indico que hay una relacion de Muchos a uno, desde el empleado
