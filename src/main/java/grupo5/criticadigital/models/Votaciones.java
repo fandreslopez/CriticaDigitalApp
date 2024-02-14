@@ -1,9 +1,6 @@
 package grupo5.criticadigital.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.sql.Date;
@@ -11,6 +8,8 @@ import java.sql.Date;
 @Data
 @Entity
 public class Votaciones {
+
+    private Integer idVotacion;
 
     private String Votacion;
 

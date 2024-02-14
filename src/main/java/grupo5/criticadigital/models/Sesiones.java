@@ -14,7 +14,7 @@ public class Sesiones {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idSesiones;
+    private Integer idSesiones;
 
     private Date FechaSesion;
 

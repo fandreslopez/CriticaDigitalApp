@@ -1,9 +1,6 @@
 package grupo5.criticadigital.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import javax.validation.constraints.Size;
@@ -11,6 +8,7 @@ import javax.validation.constraints.Size;
 @Data
 @Entity
 public class Asistencia {
+
 
     @Size(min = 3, max = 45)
     private String Situacion;
