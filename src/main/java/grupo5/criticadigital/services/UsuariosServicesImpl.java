@@ -1,13 +1,16 @@
 package grupo5.criticadigital.services;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import grupo5.criticadigital.dto.UsuariosDTO;
+import grupo5.criticadigital.models.Generos;
 import grupo5.criticadigital.models.Usuarios;
+import grupo5.criticadigital.repositories.GenerosRepository;
 import grupo5.criticadigital.repositories.UsuariosRepository;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 
 import org.springframework.stereotype.Service;
 
-import javax.validation.constraints.Null;
 import java.util.List;
 
 @Service
@@ -15,7 +18,7 @@ import java.util.List;
 @AllArgsConstructor
 public class UsuariosServicesImpl implements UsuariosServices {
 
-    private UsuariosRepository usuariosRepository;
+    private final UsuariosRepository usuariosRepository;
 
     @Override
     public List<Usuarios> obtenerUsuarios() {
@@ -24,20 +27,34 @@ public class UsuariosServicesImpl implements UsuariosServices {
 
     @Override
     public Usuarios usuarioPorId(Long id) {
-        return usuariosRepository.findById(id).get();
+        return usuariosRepository.findById(id).orElse(null);
     }
+
+    @Override
+    public UsuariosDTO buscarUsuario(String correo) {
+        Usuarios usuario = usuariosRepository.findByCorreo(correo);
+        return new UsuariosDTO(usuario.getNombre(), usuario.getApellido(), usuario.getCorreo(), usuario.getNickname(), usuario.getGeneroUsuario().getGeneroValor());
+    }
+
 
     @Override
     public Usuarios editarUsuarioPorId(Usuarios usuarioParaEditar, Long id) {
         Usuarios usuarioSeleccionado = usuariosRepository.findById(id).get();
-        return usuariosRepository.save(usuarioParaEditar);
+        usuarioSeleccionado.setNombre(usuarioParaEditar.getNombre());
+        usuarioSeleccionado.setApellido(usuarioParaEditar.getApellido());
+        usuarioSeleccionado.setNickname(usuarioParaEditar.getNickname());
+        usuarioSeleccionado.setGeneroUsuario(usuarioParaEditar.getGeneroUsuario());
+        usuarioSeleccionado.setTipoUsuario(usuarioParaEditar.getTipoUsuario());
+        usuarioSeleccionado.setCorreo(usuarioParaEditar.getCorreo());
+        usuarioSeleccionado.setFechaNacimiento(usuarioParaEditar.getFechaNacimiento());
+        usuarioSeleccionado.setPassword(usuarioParaEditar.getPassword());
+        usuarioSeleccionado.setRut(usuarioParaEditar.getRut());
+        return usuariosRepository.save(usuarioSeleccionado);
     }
 
     @Override
     public Usuarios guardarUsuario(Usuarios usuario){
-        if (usuario != null) {
-            return usuariosRepository.save(usuario);
-        } else return null;
+        return usuariosRepository.save(usuario);
     }
 
     /* public Empleado guardarEmpleado(Empleado empleadoParaGuardar) {
@@ -53,4 +70,8 @@ public class UsuariosServicesImpl implements UsuariosServices {
     public void eliminarUsuario(Long id) {
         usuariosRepository.deleteById(id);
     }
+
+
+
+
 }

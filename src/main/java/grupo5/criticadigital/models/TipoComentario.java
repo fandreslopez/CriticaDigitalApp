@@ -19,4 +19,5 @@ public class TipoComentario {
 
     @NotNull
     private String TipoComentario;
+
 }

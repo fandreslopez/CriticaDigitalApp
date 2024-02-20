@@ -1,5 +1,6 @@
 package grupo5.criticadigital.ViewsController;
 
+import grupo5.criticadigital.dto.UsuariosDTO;
 import grupo5.criticadigital.models.Usuarios;
 import grupo5.criticadigital.services.UsuariosServicesImpl;
 import lombok.AllArgsConstructor;

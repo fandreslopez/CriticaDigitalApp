@@ -1,5 +1,6 @@
 package grupo5.criticadigital.repositories;
 
+
 import grupo5.criticadigital.models.Likes;
 import org.springframework.data.convert.ReadingConverter;
 import org.springframework.data.jpa.repository.JpaRepository;
