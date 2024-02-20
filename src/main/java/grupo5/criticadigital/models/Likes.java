@@ -22,9 +22,9 @@ public class Likes{
     @JoinColumn(name = "usuario_id")//Indicamos el nombre de la columna que lleva la llave foránea
     private Usuarios usaurioLike;
 
-    @ManyToOne
+ /*   @ManyToOne
     @JoinColumn(name = "idDiputado")
     private Diputados diputadoLike;
-
+*/
 
 }

@@ -16,6 +16,7 @@ public class Usuarios {
     private Long usuarioId;
 
     @Size(max = 10)
+    @Column(unique = true)
     private String rut;
 
     private String nombre;
@@ -25,19 +26,25 @@ public class Usuarios {
     private Date fechaNacimiento;
 
     @Email(message = "No se introdujo un correo válido")
+    @Column(name = "correo",unique = true)
     private String correo;
 
+    @Column(unique = true)
     private String nickname;
 
     @Size(min = 8)
     private String password;
 
     @ManyToOne
-    @JoinColumn(name = "genero")
+    @JoinColumn(name = "genero_id")
     private Generos generoUsuario;
 
     @ManyToOne
     @JoinColumn(name = "tipo_usuario")
     private TiposUsuario tipoUsuario;
+
+    @ManyToOne
+    @JoinColumn(name = "region_id")
+    private Region regionUsuario;
 
 }
