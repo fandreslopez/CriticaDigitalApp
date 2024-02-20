@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface RegionService {
 
-    List<Region> obtenerRegion();
+   List<Region> obtenerRegion();
 
 }

@@ -1,4 +1,4 @@
-package grupo5.criticadigital.repositorys;
+package grupo5.criticadigital.repositories;
 
 import grupo5.criticadigital.models.TipoComentario;
 import org.hibernate.type.descriptor.converter.spi.JpaAttributeConverter;
