@@ -9,11 +9,12 @@ import javax.validation.constraints.Size;
 @Entity
 public class Asistencia {
 
+    @Id
+    private Integer idAsistencia;
 
     @Size(min = 3, max = 45)
     private String Situacion;
 
-    @Id
     @ManyToOne//Indico que hay una relacion de Muchos a uno, desde "Diputados Actuales"
     @JoinColumn(name = "id_diputado")//Indicamos el nombre de la columna que lleva la llave foránea
     private Diputado idDiputado;
