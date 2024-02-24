@@ -13,6 +13,7 @@ import java.util.List;
 @Transactional
 @AllArgsConstructor
 public class ComentariosServiceImpl implements ComentariosService {
+
     private ComentariosRepository comentariosRepository;
 
     @Override
@@ -42,3 +43,6 @@ public class ComentariosServiceImpl implements ComentariosService {
         comentariosRepository.deleteById(id);
     }
 }
+
+
+
