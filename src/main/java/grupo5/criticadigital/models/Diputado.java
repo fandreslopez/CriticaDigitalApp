@@ -21,7 +21,7 @@ public class Diputado {
     @DateTimeFormat(pattern = "dd-MM-yyyy")
     private Date fechaDeNacimiento;
 
-    private Integer alias;
+    private String alias;
 
     @ManyToOne
     @JoinColumn(name = "regionId")

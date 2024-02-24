@@ -19,12 +19,12 @@ public class Likes{
 
 
     @ManyToOne//Indico que hay una relacion de Muchos a uno, desde el empleado
-    @JoinColumn(name = "usuario_id")//Indicamos el nombre de la columna que lleva la llave foránea
-    private Usuarios usaurioLike;
+
+    @JoinColumn(name = "usuarioId")//Indicamos el nombre de la columna que lleva la llave foránea
+    private Usuarios usuarioLike;
 
     @ManyToOne
     @JoinColumn(name = "idDiputado")
     private Diputado diputadoLike;
-
 
 }

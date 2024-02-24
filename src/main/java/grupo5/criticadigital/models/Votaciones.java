@@ -1,9 +1,6 @@
 package grupo5.criticadigital.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.sql.Date;
@@ -11,6 +8,12 @@ import java.sql.Date;
 @Data
 @Entity
 public class Votaciones {
+
+    
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer idVotacion;
 
     private String Votacion;
 
@@ -30,7 +33,6 @@ public class Votaciones {
 
     private Date Fecha;
 
-    @Id
     @ManyToOne//Indico que hay una relacion de Muchos a uno, desde "Diputados Actuales"
     @JoinColumn(name = "id_diputado")//Indicamos el nombre de la columna que lleva la llave foránea
     private Diputado idDiputado;
