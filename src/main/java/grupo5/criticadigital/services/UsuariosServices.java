@@ -1,5 +1,6 @@
 package grupo5.criticadigital.services;
 
+import grupo5.criticadigital.dto.UsuariosDTO;
 import grupo5.criticadigital.models.Usuarios;
 
 
@@ -15,4 +16,7 @@ public interface UsuariosServices {
     Usuarios guardarUsuario(Usuarios usuario);
 
     void eliminarUsuario(Long id);
+
+    UsuariosDTO buscarUsuario(String correo);
+
 }
