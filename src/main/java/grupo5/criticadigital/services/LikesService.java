@@ -1,10 +1,20 @@
 package grupo5.criticadigital.services;
 
 
-import jakarta.transaction.Transactional;
-import org.springframework.stereotype.Service;
+import grupo5.criticadigital.models.Likes;
+import grupo5.criticadigital.models.Usuarios;
 
-@Service
-@Transactional
+import java.util.List;
+
 public interface LikesService {
+
+    List<Likes> obtenerLikes();
+
+    Likes likesPorId(Long id);
+
+    Likes editarLikesPorId(Likes likesParaEditar, Long id);
+
+    Likes guardarLikes(Likes likes);
+
+    void eliminarLikes(Long id);
 }
