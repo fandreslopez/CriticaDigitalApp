@@ -10,6 +10,7 @@ import javax.validation.constraints.Size;
 public class Asistencia {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idAsistencia;
 
     @Size(min = 3, max = 45)
