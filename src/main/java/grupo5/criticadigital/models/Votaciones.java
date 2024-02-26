@@ -3,6 +3,7 @@ package grupo5.criticadigital.models;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import javax.validation.constraints.Size;
 import java.sql.Date;
 
 @Data
@@ -19,8 +20,10 @@ public class Votaciones {
 
     private String Boletin;
 
+    @Size(min = 3, max = 2000)
     private String Descripcion;
 
+    @Size(min = 3, max = 2000)
     private String Detalle;
 
     private String Tipo;
