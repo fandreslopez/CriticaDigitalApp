@@ -1,12 +1,11 @@
+import { useState } from "react";
 import "./App.css";
-import Inicio from "./assets/Paginas/Inicio.jsx";
-import Cards from "./assets/components/Cards/Cards";
-import datos from "./assets/components/DatosJson/diputados.js";
+import NavBar from "./assets/components/NavBar/NavBar";
 
 function App() {
   return (
     <div className="container">
-      <Inicio />
+      <NavBar />
     </div>
   );
 }
