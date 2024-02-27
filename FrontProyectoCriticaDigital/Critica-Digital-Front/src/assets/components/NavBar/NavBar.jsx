@@ -1,29 +1,16 @@
 import "./NavBar.css";
-
+import img from "../imagenes/Logo temporal.png";
 function NavBar() {
   return (
     <div className="navbar">
       <div className="nav-logo">
-        <img src={logo} alt="logo" />
-        <p>EnLinea</p>
+        <img src="logo" alt="logo" />
       </div>
       <ul className="nav-menu">
-        <li>
-          <Link
-            to="/"
-            style={{ textDecoration: "none", color: "inherit", height: "50%" }}
-            onClick={() => setMenu("tienda")}
-          >
-            Tienda {menu === "tienda" ? <hr /> : <></>}
-          </Link>
-        </li>
-        <li>Hombre {menu === "hombre" ? <hr /> : <></>}</li>
-        <li onClick={() => setMenu("mujer")}>
-          Mujer {menu === "mujer" ? <hr /> : <></>}
-        </li>
-        <li onClick={() => setMenu("niños")}>
-          Niños {menu === "niños" ? <hr /> : <></>}
-        </li>
+        <li>Home </li>
+        <li>Diputado </li>
+        <li>Contacto</li>
+        <li>Registro</li>
       </ul>
     </div>
   );
