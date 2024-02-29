@@ -11,19 +11,15 @@ negro: #1C1C1C;
   justify-content: space-around;
   padding: 16px;
   width: auto;
+  height: 20%;
   background-color: #122c41;
 }
 
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-}
-
-.nav-logo p {
-  color: #fafaff;
-  font-size: 38px;
-  font-weight: 600;
+  gap: 5px;
+  height: 75px;
 }
 .nav-menu {
   display: flex;
