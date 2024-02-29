@@ -1,0 +1,74 @@
+/*
+Paleta Colores: 
+nav: #122C41;
+selección: #4285f41; 
+detalles: #1E4643; 
+blanco: #FAFAFF; 
+negro: #1C1C1C;
+*/
+.perfilDiputado {
+  border: 3px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px 30px 0px 30px;
+}
+.seccionDiputado {
+  display: flex;
+  justify-content: space-around;
+}
+/*INFORMACION DIPUTADO*/
+.informacionDiputado {
+  display: flex;
+  align-items: center;
+}
+.img {
+  width: 150px; /* Ajusta el ancho de la imagen según tus necesidades */
+  height: auto; /* La altura se ajustará automáticamente */
+  margin-right: 20px;
+  border-radius: 25px;
+}
+.InfoDip {
+  margin: auto 20px;
+  text-align: left;
+}
+.InfoDip h1 {
+  margin-top: 10px;
+  font-size: 30px;
+}
+.InfoDip p {
+  margin-top: 10px;
+}
+/*REDES SOCIALES*/
+.RedesDiputado {
+  text-align: right;
+  margin: auto 0;
+}
+.redSocial {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+.redSocial img {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+.perfilBotones {
+  margin-top: auto;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  list-style-type: none; /* Elimina los puntos de la lista */
+}
+.perfilBotones button:hover {
+  color: #4285f4; /* Cambia el color del texto al pasar el mouse */
+}
+.perfilBotones button {
+  margin: 25px 15px 0 15px; /* Elimina el margen alrededor de los botones */
+  padding: 5px 10px; /* Ajusta el espacio interno de los botones según sea necesario */
+  border: none; /* Elimina el borde de los botones */
+  background-color: transparent;
+  font-weight: 500;
+}
