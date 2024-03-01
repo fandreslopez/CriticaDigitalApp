@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import NavBar from "./assets/components/NavBar/NavBar";
 import Cards from "./assets/components/Cards/Cards";
@@ -7,8 +7,25 @@ import Inicio from "./assets/Paginas/Inicio";
 import ListaDiputado from "./assets/Paginas/ListaDiputado";
 import PerfilDiputado from "./assets/Paginas/PerfilDiputado";
 import { Routes, Route } from "react-router-dom";
+import Login from "./assets/components/Login/Login";
+import axios from "axios";
+
+/* axios.defaults.headers.common["Authorization"] = `Bearer ${
+  JSON.parse(localStorage.getItem("user")).token
+}`; */
 
 function App() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const usuario = JSON.parse(localStorage.getItem("user"));
+    if (usuario) {
+      setUser(usuario);
+    } else {
+      setUser(null);
+    }
+  }, []);
+
   return (
     <>
       <NavBar />
@@ -22,6 +39,7 @@ function App() {
           }
         ></Route>
       </Routes>
+      {!user && <Login setUser={setUser} />}
     </>
   );
 }
