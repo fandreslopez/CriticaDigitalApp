@@ -1,0 +1,61 @@
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  align-self: center;
+  border-radius: 25px;
+  background: white;
+  inset: 0;
+  height: 60vh;
+  gap: 30px;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.preguntas {
+  display: flex;
+  justify-content: center;
+}
+.formulario {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+  width: 90%;
+  font-size: 20px;
+}
+
+.pregunta {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  margin: 10px 0px;
+  width: 30%;
+  align-self: center;
+  border-radius: 100px;
+  border: none;
+  background-color: rgba(18, 44, 65, 1);
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+input {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.615);
+  font-size: 20px;
+}
+
+select {
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: "Roboto Condensed", sans-serif;
+  border-width: 2px;
+  border-style: inset;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+}
