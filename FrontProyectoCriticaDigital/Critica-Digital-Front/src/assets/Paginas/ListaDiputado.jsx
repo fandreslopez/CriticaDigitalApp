@@ -1,4 +1,5 @@
 import diputado from "../components/DatosJson/diputados";
+import Cards from "../components/Cards/Cards";
 
 function ListaDiputado() {
   return (
