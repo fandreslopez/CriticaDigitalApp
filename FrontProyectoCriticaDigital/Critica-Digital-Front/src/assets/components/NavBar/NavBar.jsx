@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 function NavBar() {
   return (
     <div className="navbar">
-      <div className="nav-logo">
-        <img src={img} />
-      </div>
+      <Link to={"/"}>
+        <img src={img} id="logo" />
+      </Link>
       <ul className="nav-menu">
         <li>
           <Link
@@ -24,10 +24,9 @@ function NavBar() {
             to="/diputados"
             onClick={() => setMenu("diputados")}
           >
-            Diputado
+            Diputados
           </Link>
         </li>
-        <li>Actividad</li>
         <li>Perfil</li>
       </ul>
     </div>

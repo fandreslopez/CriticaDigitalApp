@@ -1,26 +1,49 @@
 import React from "react";
 import "./Inicio.css";
-import img from "../components/imagenes/104490_apple_icon.svg";
-import imggoogle from "../components/imagenes/7123025_logo_google_g_icon.svg";
+import { useState, useEffect } from "react";
+import Modal from "../components/Modales/ModalCuenta";
+import ModalLogin from "../components/Modales/ModalLogin";
 
-export default function Inicio() {
+export default function Inicio({ setUser }) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const [isModalAbierto, setIsModalAbierto] = useState(false);
+  function openModal() {
+    setIsModalOpen(true);
+  }
+
+  function closeModal() {
+    setIsModalOpen(false);
+  }
+
+  function ModalAbierto() {
+    setIsModalAbierto(true);
+  }
+
+  function ModalCerrar() {
+    setIsModalAbierto(false);
+  }
+
   return (
     <div className="esquema">
-      <h1>DONDE TU OPINIÓN RESUENA, DONDE TU IMPACTO CUENTA.</h1>
+      <h1 id="lema">DONDE TU OPINIÓN RESUENA, DONDE TU IMPACTO CUENTA.</h1>
       <aside>
         <div className="registro">
           <p>ACTÚA AHORA</p>
-          <button>
-            <img className="img" src={imggoogle}></img>
-            REGISTRATE CON GOOGLE
+          <button className="boton" onClick={openModal}>
+            CREAR CUENTA
           </button>
-          <button>
-            <img className="img" src={img}></img> REGISTRATE CON APPLE
-          </button>
-          <p>O</p>
-          <button>CREAR CUENTA</button>
+          <Modal isOpen={isModalOpen} onClose={closeModal} />
           <p>¿YA TIENES UNA CUENTA?</p>
-          <button id="btn-inicio">INICIAR SESIÓN</button>
+          <button className="btn-inicio" onClick={ModalAbierto}>
+            INICIAR SESIÓN
+          </button>
+          <ModalLogin
+            isAbierto={isModalAbierto}
+            onCerrado={ModalCerrar}
+            setUser={setUser}
+            setIsModalAbierto={setIsModalAbierto}
+          />
         </div>
       </aside>
     </div>

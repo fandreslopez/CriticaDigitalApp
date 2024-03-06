@@ -8,8 +8,7 @@ import lombok.Data;
 public class Region {
 
     @Id
-    @GeneratedValue(strategy =  GenerationType.IDENTITY)
-    private Integer regionID;
+    private Integer regionId;
 
     private String nombreRegion;
 }

@@ -15,4 +15,8 @@ public interface AsistenciaService {
 
     // Método para eliminar una asistencia por su ID
     void deleteAsistencia(Integer id);
+
+    Integer getAsistenciadiputadoById(Integer id);
+
+    Integer getInasistenciaDiputadoById(Integer id);
 }

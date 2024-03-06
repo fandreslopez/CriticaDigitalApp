@@ -1,2 +1,14 @@
-package grupo5.criticadigital.dto;public class LoginDTO {
+package grupo5.criticadigital.dto;
+
+import lombok.Data;
+import javax.validation.constraints.NotBlank;
+
+@Data
+public class LoginDTO {
+
+    @NotBlank
+    private String username;
+
+    @NotBlank
+    private String password;
 }

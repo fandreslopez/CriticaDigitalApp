@@ -16,4 +16,18 @@ public interface VotacionesService {
     // Método para eliminar una votación por su ID
     void deleteVotaciones(Integer id);
 
+    Integer getvotacionAfirmativaById(Integer id);
+
+    Integer getvotacionEnContraById(Integer id);
+
+    Integer getvotacionAbstecionById(Integer id);
+
+    Integer getvotacionDispensadoById(Integer id);
+
+    List<String> getvotacionBoletinById(Integer id);
+
+    List<String> getvotacionDescripcionById(Integer id);
+
+    List<String> getvotacionSituacionById(Integer id);
+
 }

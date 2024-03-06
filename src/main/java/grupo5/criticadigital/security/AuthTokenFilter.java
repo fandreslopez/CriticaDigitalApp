@@ -22,7 +22,7 @@ public class AuthTokenFilter extends OncePerRequestFilter {
     private JwtUtils jwtUtils;
 
     @Autowired
-    private UsuariosDetailsServiceImpl userDetailsService;
+    private UsuariosDetailsServiceImpl usuariosDetailsService;
 
     private static final Logger logger = LoggerFactory.getLogger(AuthTokenFilter.class);
 
@@ -40,7 +40,7 @@ public class AuthTokenFilter extends OncePerRequestFilter {
                 String username = jwtUtils.getUsernameFromJwtToken(jwt);
 
                 // Cargar los detalles del usuario desde la base de datos
-                UserDetails userDetails = userDetailsService.loadUserByUsername(username);
+                UserDetails userDetails = usuariosDetailsService.loadUserByUsername(username);
 
                 // Crear una autenticación de usuario basada en los detalles del usuario
                 UsernamePasswordAuthenticationToken authentication =

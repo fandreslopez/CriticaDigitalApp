@@ -23,15 +23,14 @@ negro: #1C1C1C;
   display: flex;
   align-items: center;
 }
-.img {
-  width: 150px; /* Ajusta el ancho de la imagen según tus necesidades */
+.imgPerfil {
+  width: 200px; /* Ajusta el ancho de la imagen según tus necesidades */
   height: auto; /* La altura se ajustará automáticamente */
   margin-right: 20px;
   border-radius: 25px;
 }
 .InfoDip {
   margin: auto 20px;
-  text-align: left;
 }
 .InfoDip h1 {
   margin-top: 10px;
@@ -71,4 +70,48 @@ negro: #1C1C1C;
   border: none; /* Elimina el borde de los botones */
   background-color: transparent;
   font-weight: 500;
+}
+
+form {
+  align-items: center;
+}
+textarea {
+  border-radius: 10px;
+}
+.inputperfil {
+  margin-left: 85%;
+  background-color: #1e4643; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.Comentarios {
+  border: 3px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px 30px 0px 30px;
+  align-items: center;
+}
+
+.likes {
+  display: flex;
+  justify-content: space-around;
+}
+
+.likes button {
+  background-color: #1e4643;
+  border: none;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
 }

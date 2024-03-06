@@ -4,18 +4,63 @@ import Instagram from "../components/imagenes/Instagram.svg";
 import X from "../components/imagenes/X.svg";
 import { Link, useLocation } from "react-router-dom";
 import "./PerfilDiputado.css";
+import { useState, useEffect } from "react";
+import ModalComentario from "../components/Modales/ModalComentarios";
+import ModalAsistencia from "../components/Modales/ModalAsistencia";
+import ModalVotaciones from "../components/Modales/ModalVotaciones";
 
 function PerfilDiputado({ diputado }) {
+  const [isComentariosOpen, setIsComentariosOpen] = useState(false);
+  const [isAsistenciaOpen, setIsAsistenciaOpen] = useState(false);
+  const [isVotacionesOpen, setIsVotacionesOpen] = useState(false);
+
   const urlDiputado = useLocation();
-  const probando = urlDiputado.pathname;
-  const prueba1 = probando.match(/[0-9]/g);
-  const prueba2 = prueba1.join("");
+  const data = urlDiputado.pathname;
+  const _id = data.match(/[0-9]/g);
+  const idDiputado = _id.join("");
   const diputadoPerfil = diputado.filter(
-    (Dip) => Dip.idDiputado === Number(prueba2)
+    (Dip) => Dip.idDiputado === Number(idDiputado)
   )[0];
-  let imagen = `https://www.camara.cl/img.aspx?prmID=GRCL${prueba2}`;
-  console.log(prueba2);
-  console.log(diputadoPerfil);
+  let imagen = `https://www.camara.cl/img.aspx?prmID=GRCL${idDiputado}`;
+  {
+    /* Modal Comentarios */
+  }
+
+  function openComentarios() {
+    setIsComentariosOpen(true);
+    setIsVotacionesOpen(false);
+    setIsAsistenciaOpen(false);
+  }
+
+  function closeComentarios() {
+    setIsComentariosOpen(false);
+  }
+  {
+    /* Modal Asistencia */
+  }
+
+  function openAsistencia() {
+    setIsAsistenciaOpen(true);
+    setIsComentariosOpen(false);
+    setIsVotacionesOpen(false);
+  }
+
+  function closeAsistencia() {
+    setIsAsistenciaOpen(false);
+  }
+  {
+    /* Modal Votaciones */
+  }
+
+  function openVotaciones() {
+    setIsVotacionesOpen(true);
+    setIsAsistenciaOpen(false);
+    setIsComentariosOpen(false);
+  }
+
+  function closeVotaciones() {
+    setIsVotacionesOpen(false);
+  }
 
   return (
     <div>
@@ -23,7 +68,7 @@ function PerfilDiputado({ diputado }) {
         <div className="seccionDiputado">
           <div className="informacionDiputado">
             <div className="imagenDiputado">
-              <img src={imagen} className="img" />
+              <img src={imagen} className="imgPerfil" />
             </div>
             <div className="InfoDip">
               <h1>
@@ -53,26 +98,41 @@ function PerfilDiputado({ diputado }) {
           </div>
         </div>
         <div>
+          <div className="likes">
+            <button>🌟FAVORITO</button>
+          </div>
           <ul className="perfilBotones">
-            <button>RESPUESTAS</button>
-            <button>DESTACADO</button>
-            <button>ASISTENCIA</button>
-            <button>VOTACIONES</button>
+            <button onClick={openComentarios}>RESPUESTAS</button>
+            <button onClick={openAsistencia}>ASISTENCIA</button>
+            <button onClick={openVotaciones}>VOTACIONES</button>
           </ul>
         </div>
       </div>
-      <div className="perfilDiputado">
-        <div className="seccionPreguntas">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem
-          facilis tempore doloremque minus ex dolores delectus molestiae
-          voluptate eos ad qui, modi quo, libero veniam perspiciatis aspernatur
-          aliquam consequatur tempora. Tempore voluptatem earum temporibus
-          impedit, ratione provident reiciendis atque nulla fuga ea ad
-          cupiditate quam quod laboriosam molestias sequi natus quis illum eos
-          praesentium consectetur in non. Harum, iure incidunt!
-        </div>
-        <div></div>
+      <div className="Comentarios">
+        <form className="Box">
+          <textarea rows="5" cols="100"></textarea>
+          <input
+            className="inputperfil"
+            type="submit"
+            value="Enviar comentario"
+          />
+        </form>
       </div>
+      <ModalComentario
+        asistencia={idDiputado}
+        isComentariosOpen={isComentariosOpen}
+        onComentarioClose={closeComentarios}
+      />
+      <ModalAsistencia
+        isAsistencia={isAsistenciaOpen}
+        onAsistencia={closeAsistencia}
+        idAsistenciaDiputado={idDiputado}
+      />
+      <ModalVotaciones
+        isVotaciones={isVotacionesOpen}
+        onVotaciones={closeVotaciones}
+        idVotacionesDiputado={idDiputado}
+      />
     </div>
   );
 }

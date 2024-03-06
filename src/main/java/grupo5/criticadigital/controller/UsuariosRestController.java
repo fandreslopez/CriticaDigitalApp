@@ -1,5 +1,6 @@
 package grupo5.criticadigital.controller;
 
+import grupo5.criticadigital.dto.LoginDTO;
 import grupo5.criticadigital.dto.UsuariosDTO;
 import grupo5.criticadigital.models.Usuarios;
 import grupo5.criticadigital.services.UsuariosServices;
@@ -13,7 +14,8 @@ import java.util.List;
 
 @RestController
 @Data
-@RequestMapping("api/usuarios")
+@RequestMapping("/api/usuarios")
+@CrossOrigin(value = "http://localhost:5173")
 public class UsuariosRestController {
 
     private final UsuariosServicesImpl usuariosServices;
@@ -23,12 +25,6 @@ public class UsuariosRestController {
         Usuarios usuarioSeleccionado = usuariosServices.usuarioPorId(id);
         return new ResponseEntity<>(usuarioSeleccionado, HttpStatus.OK);
     }
-
-    @GetMapping("login")
-    public ResponseEntity<UsuariosDTO> usuarioDTO (@RequestBody Usuarios usuario) {
-        return new ResponseEntity<>(usuariosServices.buscarUsuario(usuario.getCorreo()), HttpStatus.OK);
-    }
-
 
     @GetMapping("lista")
     public ResponseEntity<List<Usuarios>> listarUsuarios (){

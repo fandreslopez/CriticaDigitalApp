@@ -6,10 +6,7 @@
 .card {
   width: 200px;
 }*/
-.contenedor {
-  margin-top: 50px;
-  display: flex;
-}
+
 .container {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: auto;
@@ -19,6 +16,32 @@
   flex-wrap: wrap;
   max-width: 1100px;
   gap: 30px;
+  position: 50px;
+  padding-bottom: 80px;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+}
+.contenedor h1 {
+  text-align: center;
+  color: #fff;
+  width: fit-content;
+  background-color: rgba(18, 44, 65, 1);
+  align-self: center;
+  padding: 10px 20px;
+  border-radius: 10px;
 }
 /*.card {
   position: relative;
@@ -40,10 +63,14 @@ h2 {
 }
 .card {
   margin-top: 50px;
-  align-items: center;
   background-color: #f1f1f1;
   padding: 16px;
   border-radius: 4px;
+  view-timeline-name: --card;
+  view-timeline-axis: block;
+  animation-timeline: --card;
+  animation-name: show;
+  animation-range: entry 0% cover 70%;
 }
 
 .profile-picture {
@@ -70,4 +97,14 @@ h2 {
   font-size: 15px;
   cursor: pointer;
   border-radius: 12px;
+  transition: transform 0.2s;
+}
+
+.follow-button:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  text-align: center;
+  padding: 40px;
 }

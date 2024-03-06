@@ -13,7 +13,7 @@ public interface UsuariosServices {
 
     Usuarios editarUsuarioPorId(Usuarios usuarioParaEditar, Long id);
 
-    Usuarios guardarUsuario(Usuarios usuario);
+    Usuarios guardarUsuario(Usuarios newUser);
 
     void eliminarUsuario(Long id);
 

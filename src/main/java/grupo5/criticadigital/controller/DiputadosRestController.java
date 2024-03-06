@@ -13,6 +13,7 @@ import java.util.List;
 @Data
 @RestController
 @RequestMapping("/api/diputados")
+@CrossOrigin("*")
 public class DiputadosRestController {
 
     private final DiputadoServiceImpl diputadoService;

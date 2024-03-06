@@ -5,12 +5,13 @@
   text-align: center;
 } */
 * {
-  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
 }
 html,
 body {
   margin: 0px;
   padding: 0px;
+  scrollbar-color: red;
 }
 .logo {
   height: 6em;
@@ -51,4 +52,8 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+#root {
+  height: 100vh;
 }

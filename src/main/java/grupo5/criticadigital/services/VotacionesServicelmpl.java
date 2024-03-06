@@ -13,6 +13,38 @@ import java.util.List;
 @AllArgsConstructor
 public class VotacionesServicelmpl implements VotacionesService {
 
+    @Override
+    public Integer getvotacionAfirmativaById(Integer id) {
+        return votacionesRepository.votacionAfirmativa(id);
+    }
+
+    @Override
+    public Integer getvotacionEnContraById(Integer id) {
+        return votacionesRepository.votacionEnContra(id);
+    }
+
+    @Override
+    public Integer getvotacionAbstecionById(Integer id) {
+        return votacionesRepository.votacionAbstecion(id);
+    }
+
+    @Override
+    public Integer getvotacionDispensadoById(Integer id) {
+        return votacionesRepository.votacionDispensado(id);
+    }
+
+    @Override
+    public List<String> getvotacionBoletinById(Integer id) {return votacionesRepository.votacionBoletin(id);
+    }
+
+    @Override
+    public List<String> getvotacionDescripcionById(Integer id) {return votacionesRepository.votacionDescripcion(id);
+    }
+
+    @Override
+    public List<String> getvotacionSituacionById(Integer id) {return votacionesRepository.votacionSituacion(id);
+    }
+
     private final VotacionesRepository votacionesRepository;
 
     // Método para obtener todas las votaciones

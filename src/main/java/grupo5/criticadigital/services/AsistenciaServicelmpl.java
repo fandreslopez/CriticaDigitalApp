@@ -14,6 +14,15 @@ import java.util.Optional;
 @Transactional // Anotación para indicar que los métodos de esta clase son transaccionales
 @AllArgsConstructor // Anotación de Lombok para generar un constructor con todos los argumentos
 public class AsistenciaServicelmpl implements AsistenciaService {
+    @Override
+    public Integer getAsistenciadiputadoById(Integer id) {
+        return asistenciaRepository.asistenciaDiputado(id);
+    }
+
+    @Override
+    public Integer getInasistenciaDiputadoById(Integer id) {
+        return asistenciaRepository.inasistenciaDiputado(id);
+    }
 
     @Autowired
     private AsistenciaRepository asistenciaRepository; // Inyección de dependencia del repositorio de Asistencia

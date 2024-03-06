@@ -1,23 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Cards.css";
 import axios from "axios";
-import PerfilDiputado from "../../Paginas/PerfilDiputado";
 import { Link } from "react-router-dom";
 
-function Cards({ data, titulo }) {
+function Cards({ data }) {
   let imagen = "https://www.camara.cl/img.aspx?prmID=GRCL";
   return (
     <div className="contenedor">
+      {/*       <h1>DIPUTADOS PERIODO ACTUAL</h1>
+       */}{" "}
       <div className="container">
-        {data.map((diputado, index) => (
-          <div className="card" key={index}>
+        {data.map((diputado) => (
+          <div className="card" key={diputado.idDiputado}>
             <img
               src={imagen + diputado.idDiputado}
               className="profile-picture"
             />
             <div className="profile-info">
               <h2>{diputado.nombres}</h2>
-              <h2>{diputado.apellidos}</h2>
+              <h2>{diputado.apellidos.split(" ", 2).join(" ")}</h2>
               <button className="follow-button">
                 <Link to={`/perfil/${diputado.idDiputado}`}>Ver Diputado</Link>
               </button>
@@ -25,18 +26,10 @@ function Cards({ data, titulo }) {
           </div>
         ))}
       </div>
+      <footer>
+        <p>© 2024 CriticaDigital. Todos los derechos reservados.</p>
+      </footer>
     </div>
   );
 }
 export default Cards;
-
-/*<div className="card" key={index}>
-<img src={imagen + diputado.idDiputado} className="img" />
-<div className="card-container">
-  <h4>
-    <b>
-      {diputado.nombres} {diputado.apellidos}
-    </b>
-  </h4>
-</div>
-</div>*/

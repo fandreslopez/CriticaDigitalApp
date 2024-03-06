@@ -12,6 +12,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Transactional
@@ -53,8 +54,8 @@ public class UsuariosServicesImpl implements UsuariosServices {
     }
 
     @Override
-    public Usuarios guardarUsuario(Usuarios usuario){
-        return usuariosRepository.save(usuario);
+    public Usuarios guardarUsuario(Usuarios nuevoUsuario){
+        return usuariosRepository.save(nuevoUsuario);
     }
 
     /* public Empleado guardarEmpleado(Empleado empleadoParaGuardar) {
@@ -69,6 +70,18 @@ public class UsuariosServicesImpl implements UsuariosServices {
     @Override
     public void eliminarUsuario(Long id) {
         usuariosRepository.deleteById(id);
+    }
+
+    public Optional<Usuarios> buscarUsuarioPorUsername(String nickname) {
+        return usuariosRepository.findByNickname(nickname);
+    }
+
+    public Boolean existeUsuarioPorUsername(String nickname) {
+        return usuariosRepository.existsByNickname(nickname);
+    }
+
+    public Boolean existeUsuarioPorEmail(String correo) {
+        return usuariosRepository.existsByCorreo(correo);
     }
 
 
