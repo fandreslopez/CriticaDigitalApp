@@ -1,0 +1,217 @@
+/*
+Paleta Colores: 
+nav: #122C41;
+selección: #4285f41; 
+detalles: #1E4643; 
+blanco: #FAFAFF; 
+negro: #1C1C1C;
+*/
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.782);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-register {
+  width: 50%;
+  background: #24303c;
+  box-shadow: 7px 13px 37px #000;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.form-register h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.controls {
+  width: 80%;
+  background: #24303c;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #1f53c5;
+  font-size: 18px;
+  color: white;
+}
+
+#seleccionables {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 10px 0px;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.boton-crear {
+  width: 100%;
+  background: #1f53c5;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 25px 0px 20px 0px;
+  font-size: 20px;
+  border-radius: 3px;
+}
+
+.form-register-login h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.controls-login {
+  width: 100%;
+  background: #24303c;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #1f53c5;
+  font-family: "calibri";
+  font-size: 18px;
+  color: white;
+}
+
+.form-register-login p {
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.form-register-login a {
+  color: white;
+  text-decoration: none;
+}
+
+.form-register-login a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.form-register-login .botons {
+  width: 100%;
+  background: #1f53c5;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 16px 0;
+  font-size: 16px;
+}
+
+.etiquetas-ingreso {
+  font-size: 30px;
+}
+
+.grafico {
+  height: 200px;
+  margin: 1rem auto;
+  position: relative;
+  width: 200px;
+}
+.recorte {
+  border-radius: 50%;
+  clip: rect(0px, 200px, 200px, 100px);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.quesito {
+  border-radius: 50%;
+  clip: rect(0px, 100px, 200px, 0px);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  font-family: monospace;
+  font-size: 1.5rem;
+}
+.sombra {
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.3);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+#porcion1 {
+  transform: rotate(0deg);
+}
+#porcion1 .quesito {
+  background-color: rgb(0, 0, 255);
+}
+#porcion2 .quesito {
+  background-color: rgb(255, 255, 0);
+}
+#porcion3 {
+  transform: rotate(-200deg);
+}
+#porcion3 .quesito {
+  background-color: rgb(255, 255, 0);
+  transform: rotate(90deg);
+}
+#porcionFin {
+  transform: rotate(-145deg);
+}
+#porcionFin .quesito {
+  background-color: rgb(255, 255, 0);
+  transform: rotate(145deg);
+}
+.graficoVotacion {
+  height: 200px;
+  margin: 1rem auto;
+  position: relative;
+  width: 200px;
+}
+.recorteVotacion {
+  border-radius: 50%;
+  clip: rect(0px, 200px, 200px, 100px);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.quesitoVotacion {
+  border-radius: 50%;
+  clip: rect(0px, 100px, 200px, 0px);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  font-family: monospace;
+  font-size: 1.5rem;
+}
+.sombraVotacion {
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.3);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+#porcion1Votacion {
+  transform: rotate(0deg);
+}
+#porcion1Votacion .quesitoVotacion {
+  background-color: rgb(0, 0, 255);
+}
+#porcion2Votacion .quesitoVotacion {
+  background-color: rgb(255, 0, 0);
+}
+#porcion3Votacion .quesitoVotacion {
+  background-color: rgb(255, 255, 0);
+}
+#porcionFinVotacion .quesitoVotacion {
+  background-color: rgb(0, 255, 183);
+}
+
+.seccionGrafico {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
