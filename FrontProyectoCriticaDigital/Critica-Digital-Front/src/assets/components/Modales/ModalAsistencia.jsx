@@ -30,7 +30,7 @@ function ModalAsistencia({ isAsistencia, idAsistenciaDiputado }) {
         <div className="perfilDiputado">
           <div className="seccionGrafico">
             <div className="informacionDiputado">
-              <div className="InfoDip">
+              <div className="asistencia">
                 <h1>Asistencia</h1>
                 <p>
                   Asistencia: {"  "} {data.asistencias} (
@@ -67,7 +67,6 @@ function ModalAsistencia({ isAsistencia, idAsistenciaDiputado }) {
                 </div>
               </div>
             </div>
-            <div className="RedesDiputado"></div>
           </div>
         </div>
       )}

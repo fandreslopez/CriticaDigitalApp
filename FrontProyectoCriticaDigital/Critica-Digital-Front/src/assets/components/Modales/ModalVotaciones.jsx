@@ -59,18 +59,30 @@ function ModalVotaciones({ isVotaciones, idVotacionesDiputado }) {
         <div className="perfilDiputado">
           <div className="seccionGrafico">
             <div className="informacionDiputado">
-              <div className="InfoDip">
+              <div className="votaciones">
                 <h1>Votaciones</h1>
                 <p>
-                  A favor: {data.votacionAfirmativa} (
-                  {Math.round(porcentajeAfavor * 10) / 10}%) | En Contra:{" "}
-                  {data.votacionEnContra} (
-                  {Math.round(porcentajeEncontra * 10) / 10}%) | Abstencion:
-                  {data.votacionAbstecion} (
-                  {Math.round(porcentajeAbstencion * 10) / 10}%)| Dispensado:
-                  {data.votacionDispensado} (
-                  {Math.round(porcentajeDispensado * 10) / 10}%) | Total
-                  Votaciones: {TotalVotaciones}
+                  A favor:{data.votacionAfirmativa}{" "}
+                  <span className="Afavor">
+                    ({Math.round(porcentajeAfavor * 10) / 10}%){" "}
+                  </span>{" "}
+                  | En Contra: {data.votacionEnContra}{" "}
+                  <span className="Encontra">
+                    ({Math.round(porcentajeEncontra * 10) / 10}%){" "}
+                  </span>{" "}
+                  | Abstencion:
+                  {data.votacionAbstecion}{" "}
+                  <span className="Abstencion">
+                    {" "}
+                    ({Math.round(porcentajeAbstencion * 10) / 10}%){" "}
+                  </span>
+                  | Dispensado:
+                  {data.votacionDispensado}
+                  <span className="Dispensado">
+                    {" "}
+                    ({Math.round(porcentajeDispensado * 10) / 10}%){" "}
+                  </span>{" "}
+                  | Total Votaciones: {TotalVotaciones}
                 </p>
                 <div className="graficoVotacion">
                   <div className="sombraVotacion"></div>
@@ -143,7 +155,7 @@ function ModalVotaciones({ isVotaciones, idVotacionesDiputado }) {
                     ></div>
                   </div>
                 </div>
-                <div className="seccionGrafico">
+                <div className="divTabla">
                   <table>
                     <thead>
                       <tr>
@@ -165,7 +177,6 @@ function ModalVotaciones({ isVotaciones, idVotacionesDiputado }) {
                 </div>
               </div>
             </div>
-            <div className="RedesDiputado"></div>
           </div>
         </div>
       )}

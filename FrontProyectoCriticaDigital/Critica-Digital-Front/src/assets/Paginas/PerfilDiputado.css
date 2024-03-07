@@ -13,10 +13,12 @@ negro: #1C1C1C;
   border-radius: 15px;
   padding: 20px;
   margin: 20px 30px 0px 30px;
+  align-items: center;
 }
 .seccionDiputado {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  width: 80%;
 }
 /*INFORMACION DIPUTADO*/
 .informacionDiputado {
@@ -24,16 +26,16 @@ negro: #1C1C1C;
   align-items: center;
 }
 .imgPerfil {
-  width: 200px; /* Ajusta el ancho de la imagen según tus necesidades */
-  height: auto; /* La altura se ajustará automáticamente */
-  margin-right: 20px;
   border-radius: 25px;
 }
 .InfoDip {
-  margin: auto 20px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  align-items: start;
+  justify-content: center;
 }
 .InfoDip h1 {
-  margin-top: 10px;
   font-size: 30px;
 }
 .InfoDip p {
@@ -41,8 +43,10 @@ negro: #1C1C1C;
 }
 /*REDES SOCIALES*/
 .RedesDiputado {
-  text-align: right;
-  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 250px;
 }
 .redSocial {
   display: flex;
@@ -78,18 +82,6 @@ form {
 textarea {
   border-radius: 10px;
 }
-.inputperfil {
-  margin-left: 85%;
-  background-color: #1e4643; /* Green */
-  border: none;
-  color: white;
-  padding: 10px 10px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 15px;
-  cursor: pointer;
-  border-radius: 12px;
-}
 
 .Comentarios {
   border: 3px solid #ccc;
@@ -101,17 +93,53 @@ textarea {
   align-items: center;
 }
 
+.comentario-condicional {
+  text-align: center;
+  font-size: 20px;
+  align-self: center;
+}
+
 .likes {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 40px;
 }
 
 .likes button {
-  background-color: #1e4643;
+  color: #4285f4;
   border: none;
   color: white;
   font-size: 20px;
   border-radius: 10px;
   display: flex;
   align-items: center;
+  background-color: transparent;
+}
+
+.imagenDiputado {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 250px;
+}
+
+.enviar-comentario {
+  font-size: 20px;
+  background-color: #1e4643;
+  color: white;
+  padding: 10px 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.inputperfil {
+  max-width: fit-content;
+  min-width: fit-content;
+}
+
+.Box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }

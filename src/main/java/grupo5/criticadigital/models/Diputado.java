@@ -23,6 +23,12 @@ public class Diputado {
 
     private String alias;
 
+    private String twitter;
+
+    private String facebook;
+
+    private String instagram;
+
     @ManyToOne
     @JoinColumn(name = "regionId")
     private Region idRegion;

@@ -20,10 +20,10 @@ public class Votaciones {
 
     private String Boletin;
 
-    @Size(min = 3, max = 2000)
+    @Column(length = 2000)
     private String Descripcion;
 
-    @Size(min = 3, max = 2000)
+    @Column(length = 2000)
     private String Detalle;
 
     private String Tipo;

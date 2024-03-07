@@ -61,7 +61,7 @@ public class AuthRestController {
         System.out.println("funciona");
 
         // Retorna una respuesta exitosa con el token JWT y detalles del usuario
-        return new ResponseEntity<>(new JwtResponse(jwtToken, userDetails.getUsername(), userDetails.getEmail()), HttpStatus.OK);
+        return new ResponseEntity<>(new JwtResponse(jwtToken, userDetails.getUsername(), userDetails.getEmail(), userDetails.getId()), HttpStatus.OK);
     }
 
     @PostMapping("/registro")
@@ -123,5 +123,6 @@ public class AuthRestController {
         private String token;
         private String username;
         private String email;
+        private Long usuario_id;
     }
 }

@@ -15,4 +15,6 @@ public interface ComentariosService {
     Comentarios guardarComentarios(Comentarios comentarios);
 
     void eliminarComentarios(Long id);
+
+    List<String> getComentarioById(Integer id);
 }

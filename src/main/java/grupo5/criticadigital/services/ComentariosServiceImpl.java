@@ -17,6 +17,12 @@ public class ComentariosServiceImpl implements ComentariosService {
     private ComentariosRepository comentariosRepository;
 
     @Override
+    public List<String> getComentarioById(Integer id){
+
+        return comentariosRepository.publicacionComentario(id);
+    }
+
+    @Override
     public List<Comentarios> obtenerComentarios() {
         return comentariosRepository.findAll();
     }

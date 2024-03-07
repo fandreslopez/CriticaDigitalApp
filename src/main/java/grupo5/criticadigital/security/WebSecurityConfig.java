@@ -65,9 +65,10 @@ public class WebSecurityConfig {
                         .requestMatchers("/api/auth/**").permitAll() // Permite el acceso a rutas específicas sin autenticación
                         .requestMatchers("api/usuarios/nuevo").permitAll()
                         .requestMatchers("api/usuarios/lista").permitAll()
-                        .requestMatchers("api/diputados/lista").permitAll()
+                        .requestMatchers("api/diputados/**").permitAll()
                         .requestMatchers("api/asistencias/**").permitAll()
                         .requestMatchers("api/votaciones/**").permitAll()
+                        .requestMatchers("api/comentarios/**").permitAll()
                         .anyRequest().authenticated() // Requiere autenticación para cualquier otra solicitud
                 );
         http.authenticationProvider(authenticationProvider()); // Agrega el proveedor de autenticación al objeto HttpSecurity

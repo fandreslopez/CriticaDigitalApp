@@ -41,7 +41,11 @@ function App() {
         <Route
           path="/perfil/:idDiputado"
           element={
-            <PerfilDiputado diputado={diputados} titulo="PerfilDiputado" />
+            <PerfilDiputado
+              diputado={diputados}
+              user={user}
+              titulo="PerfilDiputado"
+            />
           }
         ></Route>
       </Routes>

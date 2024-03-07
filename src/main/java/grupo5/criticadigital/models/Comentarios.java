@@ -3,6 +3,9 @@ package grupo5.criticadigital.models;
 import jakarta.persistence.*;
 import lombok.Data;
 import net.sf.jsqlparser.expression.DateTimeLiteralExpression;
+
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Size;
 import java.sql.Date;
 @Entity
 @Data
@@ -12,6 +15,7 @@ public class Comentarios {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idComentarios;
 
+    @Column(length = 1000)
     private String comentarios;
 
     private Date fechaPublicacion;

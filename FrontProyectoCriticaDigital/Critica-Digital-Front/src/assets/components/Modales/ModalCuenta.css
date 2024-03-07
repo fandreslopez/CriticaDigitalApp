@@ -215,3 +215,49 @@ negro: #1C1C1C;
   justify-content: center;
   text-align: center;
 }
+
+.Afavor {
+  color: rgb(0, 255, 183);
+}
+.Encontra {
+  color: rgb(255, 255, 0);
+}
+.Abstencion {
+  color: rgb(255, 0, 0);
+}
+.Dispensado {
+  color: rgb(0, 0, 255);
+}
+
+.divTabla {
+  max-height: 300px;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  align-items: center;
+  height: 600px;
+  max-height: 250px;
+  overflow-y: auto !important;
+  width: 700px;
+  align-self: center;
+}
+
+.votaciones {
+  display: flex;
+  flex-direction: column;
+}
+
+.comentarios {
+  min-width: 80vw;
+  max-width: 80vw;
+}
+.comentarios h1 {
+  text-align: center;
+}
+
+.comentarios p {
+  border: #24303c solid;
+  border-radius: 10px;
+  padding: 5px;
+}
