@@ -83,7 +83,10 @@ function PerfilDiputado({ diputado, user }) {
             <img src={imagen} className="imgPerfil" />
             <div className="likes">
               <button>
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAsRJREFUSEvF1k9IFFEcB/Dvb95okN4Ks1PRLSJ32sRAsOgQOjsLRQsS/SGMILrYrcJTJ80gKOhUQV0iSry57tohpcCD6P7xUNQh8WSrRIFY2/re+8VYbq7urjuj4t7m/fl9fr/33uwbwjb9aJtc+IbN6ORxN2npNLzzk7wvuCqaaGQyXrggaeP8YrhhwivuCxax5BNiWqqYgREVsq5tPRxL7jeZhlZALAXZaA1MecE9V2wOpnoBnClAiPqlHejaOngoXWcqPQKQKERYyWyuBWePfasU91SxOZi6BeBKieCPZci6v/nwULrGVPweQE2J4Asy870ZHSezleAFFVcPTBxUMA7AoD1EqAPTHgbqCFwPoA5A9TpBcwBmGZgh0ByIM6yRgcEZofRULnz04/L8PCwGJ22CflBJtr7HEDqlbS29EXnYjKdboPmp76DrT2RifXHRCY4XwO6DGEg6ZJB7QDwduvVN5KDRKcPW8JqlXm7YAnyBDLq62BZIrEywaGWbhjN+CODSb8f6vHpVSi7pxnGakawuwwlOF9uKsnu5AXxaQl9AKDhXav/LH6LXLMzadBLAjgoO0P8hTM+lE+gpN6csXB2baNAs+jyhf9+VL9K2bN+wiKY6iHDbM+x+mXDuBJymr76WWsRSj4hxyg/MRHeUHXjpCzZj6VEw7yox+ee/9p3F+hl4q0LWde9w9MM+k3JvigZljCkhby792ynzHhGa1owj/JLzVU1oP+ReHEW6S6Qk4ukIae5e1b3AQK8KWa9WtotY4hyx4SZSeGVq7pDhI6OeYDOW7gZzZHkSE0YVyS60Nc4UzTU+vlew2U2M5nw/4Zm0rbve4GjqIQhtIJpnrXqUE+yv5JCJaCJCZLjfX7VgxKVj3fAEY/jTbiObbdc5ox+nD2cqQfNjomP1hqiKaDL60BqY9QZ7krwP3ux7t+IM/gBg+PQfbRzXDAAAAABJRU5ErkJggg==" />
+                <img
+                  className="Star"
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAsRJREFUSEvF1k9IFFEcB/Dvb95okN4Ks1PRLSJ32sRAsOgQOjsLRQsS/SGMILrYrcJTJ80gKOhUQV0iSry57tohpcCD6P7xUNQh8WSrRIFY2/re+8VYbq7urjuj4t7m/fl9fr/33uwbwjb9aJtc+IbN6ORxN2npNLzzk7wvuCqaaGQyXrggaeP8YrhhwivuCxax5BNiWqqYgREVsq5tPRxL7jeZhlZALAXZaA1MecE9V2wOpnoBnClAiPqlHejaOngoXWcqPQKQKERYyWyuBWePfasU91SxOZi6BeBKieCPZci6v/nwULrGVPweQE2J4Asy870ZHSezleAFFVcPTBxUMA7AoD1EqAPTHgbqCFwPoA5A9TpBcwBmGZgh0ByIM6yRgcEZofRULnz04/L8PCwGJ22CflBJtr7HEDqlbS29EXnYjKdboPmp76DrT2RifXHRCY4XwO6DGEg6ZJB7QDwduvVN5KDRKcPW8JqlXm7YAnyBDLq62BZIrEywaGWbhjN+CODSb8f6vHpVSi7pxnGakawuwwlOF9uKsnu5AXxaQl9AKDhXav/LH6LXLMzadBLAjgoO0P8hTM+lE+gpN6csXB2baNAs+jyhf9+VL9K2bN+wiKY6iHDbM+x+mXDuBJymr76WWsRSj4hxyg/MRHeUHXjpCzZj6VEw7yox+ee/9p3F+hl4q0LWde9w9MM+k3JvigZljCkhby792ynzHhGa1owj/JLzVU1oP+ReHEW6S6Qk4ukIae5e1b3AQK8KWa9WtotY4hyx4SZSeGVq7pDhI6OeYDOW7gZzZHkSE0YVyS60Nc4UzTU+vlew2U2M5nw/4Zm0rbve4GjqIQhtIJpnrXqUE+yv5JCJaCJCZLjfX7VgxKVj3fAEY/jTbiObbdc5ox+nD2cqQfNjomP1hqiKaDL60BqY9QZ7krwP3ux7t+IM/gBg+PQfbRzXDAAAAABJRU5ErkJggg=="
+                />
               </button>
               <button>
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAhdJREFUSEvl1jFo1GAUB/D/y5dcHcTFURClooKnvVzTQ+hURaioCELrokuhmy5OFVfB4iII3exUpyuFLg6iQhFK0eS8nLoIUtHFTQenXr7vnkRz1bskl+R6oYI3HeHj/d5735eXj7BLP9olF/8wXJ0SOPLlWMHw9GbxzTsQOLJLDK3wvlxseobEx4MfML2senUztmLx1jrPLdwl4CQAIwiyBcYrYm1Oll9v+M/0ujXOhHkAFQCFYJ0HQoMU3ZZl+3lUAmHYGTV0neYZuJWQ8QP+ndCNhHX35fe9dzCxJv9eF4KFa60AuDLYQ8dVVapdjYWFO3YN4KXBokE05mll1pbbsf9UXJ0S4ujmZ4AO5AIDm6rkDIdgvVE+w6y9yAn9FVZjqnimbfv/tyvW3NGbBHqYJwzQdVWyH3fDcwS6lytMPKtGao86YOFaMwAWc4WZLyqz9qQDRv30IUHyU46wp/YM7cfx9R+dMADRsFbBuJwTvqBKzvaw6RwgjcphwS0XwL4B41+VYRRxYuNb+D0OngSv1VN/DA8Il6TRWXnKftlzZAaD/xwT/EPQ/jj0m4NHjAvSdJ51B4j9Oul1a6d4LBo6XN1Z7QDviSbCfbY9EU0FZ8S3iHEpak9T73EfbU+Npq64nUSPPffRSWk6a2mPf+ZbZgSeGc1ccUTlrayVxk6utK3yb6HE1JQjdl+Xh8ytTptY0rr/D/4JCozHHxT1duYAAAAASUVORK5CYII=" />
@@ -142,7 +145,7 @@ function PerfilDiputado({ diputado, user }) {
         </div>
         <div>
           <ul className="perfilBotones">
-            <button onClick={openComentarios}>RESPUESTAS</button>
+            <button onClick={openComentarios}>COMENTARIOS</button>
             <button onClick={openAsistencia}>ASISTENCIA</button>
             <button onClick={openVotaciones}>VOTACIONES</button>
           </ul>

@@ -145,23 +145,23 @@ negro: #1C1C1C;
   transform: rotate(0deg);
 }
 #porcion1 .quesito {
-  background-color: rgb(0, 0, 255);
+  background-color: #06d6a0;
 }
 #porcion2 .quesito {
-  background-color: rgb(255, 255, 0);
+  background-color: #4062bb;
 }
 #porcion3 {
   transform: rotate(-200deg);
 }
 #porcion3 .quesito {
-  background-color: rgb(255, 255, 0);
+  background-color: #4062bb;
   transform: rotate(90deg);
 }
 #porcionFin {
   transform: rotate(-145deg);
 }
 #porcionFin .quesito {
-  background-color: rgb(255, 255, 0);
+  background-color: #4062bb;
   transform: rotate(145deg);
 }
 .graficoVotacion {
@@ -198,16 +198,16 @@ negro: #1C1C1C;
   transform: rotate(0deg);
 }
 #porcion1Votacion .quesitoVotacion {
-  background-color: rgb(0, 0, 255);
+  background-color: #ef476f;
 }
 #porcion2Votacion .quesitoVotacion {
-  background-color: rgb(255, 0, 0);
+  background-color: #ffd166;
 }
 #porcion3Votacion .quesitoVotacion {
-  background-color: rgb(255, 255, 0);
+  background-color: #06d6a0;
 }
 #porcionFinVotacion .quesitoVotacion {
-  background-color: rgb(0, 255, 183);
+  background-color: #4062bb;
 }
 
 .seccionGrafico {
@@ -217,16 +217,16 @@ negro: #1C1C1C;
 }
 
 .Afavor {
-  color: rgb(0, 255, 183);
+  color: #4062bb;
 }
 .Encontra {
-  color: rgb(255, 255, 0);
+  color: #06d6a0;
 }
 .Abstencion {
-  color: rgb(255, 0, 0);
+  color: #ffd166;
 }
 .Dispensado {
-  color: rgb(0, 0, 255);
+  color: #ef476f;
 }
 
 .divTabla {
@@ -257,7 +257,7 @@ negro: #1C1C1C;
 }
 
 .comentarios p {
-  border: #24303c solid;
+  border: #4062bb solid 5px;
   border-radius: 10px;
   padding: 5px;
 }

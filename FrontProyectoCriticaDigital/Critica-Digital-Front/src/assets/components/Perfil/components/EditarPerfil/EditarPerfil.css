@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+
+:root {
+  --primary-white: #ffffff;
+  --secondary-white: #fafafa;
+  --primary-black: #000000;
+  --secondary-black: #1c1c1c;
+  --primary-blue: #122c41;
+  --secondary-blue: #4285f4;
+  --primary-green: #1e4643;
+  --primary-grey: rgba(169, 169, 169, 0.8);
+}
+
+* {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.formulario {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.field {
+  flex: 1 1 calc(33.33% - 20px);
+  display: flex;
+  flex-direction: column;
+}
+
+.field h4 {
+  color: var(--secondary-black);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  border: none;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.ingresoDatos {
+  width: 350px;
+  height: 30px;
+  color: var(--secondary-black);
+  background-color: var(--secondary-white);
+  font-size: 18px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  border: none;
+  margin-top: 5px;
+  padding-top: 4px;
+}
+
+.ingresoDatos:-webkit-autofill {
+  color: var(--secondary-black);
+}
+
+.update {
+  background-color: var(--secondary-blue);
+  color: var(--secondary-white);
+  text-transform: uppercase;
+}
+
+.boton {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}

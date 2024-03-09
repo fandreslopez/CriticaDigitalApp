@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+
+:root {
+  --primary-white: #ffffff;
+  --secondary-white: #fafafa;
+  --primary-black: #000000;
+  --secondary-black: #1c1c1c;
+  --primary-blue: #122c41;
+  --secondary-blue: #4285f4;
+  --primary-green: #1e4643;
+  --primary-grey: rgba(169, 169, 169, 0.8);
+}
+
+* {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.data {
+  width: 100%;
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.data img {
+  border-radius: 150px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  height: 150px;
+}
+
+.data h4 {
+  color: var(--primary-black);
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.profileButtons {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 150px;
+}
+
+.profileButtons button {
+  color: var(--primary-black);
+  background-color: var(--primary-white);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  padding: 8px 16px;
+  text-decoration: none;
+  position: relative;
+}
+
+.profileButtons button {
+  font-size: 20px;
+  padding-left: 20%;
+}
+
+.profileButtons button:hover {
+  color: var(--secondary-blue);
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 1px;
+}
+
+.profileButtons button:focus {
+  outline: none;
+  color: var(--secondary-blue);
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.profile {
+  width: 100%;
+}

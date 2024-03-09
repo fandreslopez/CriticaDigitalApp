@@ -6,6 +6,7 @@ import ListaDiputado from "./assets/Paginas/ListaDiputado";
 import PerfilDiputado from "./assets/Paginas/PerfilDiputado";
 import { Routes, Route, useLocation } from "react-router-dom";
 import axios from "axios";
+import UserProfile from "./index";
 
 /* axios.defaults.headers.common["Authorization"] = `Bearer ${
   JSON.parse(localStorage.getItem("user")).token
@@ -31,7 +32,7 @@ function App() {
 
   return (
     <>
-      <NavBar />
+      <NavBar userper={user} />
       <Routes>
         <Route path="/" element={<Inicio setUser={setUser} />}></Route>
         <Route
@@ -48,6 +49,7 @@ function App() {
             />
           }
         ></Route>
+        {user && <Route path="/perfil" element={<UserProfile />}></Route>}
       </Routes>
     </>
   );

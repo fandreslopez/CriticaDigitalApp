@@ -2,7 +2,7 @@ import "./NavBar.css";
 import img from "../imagenes/Image20240227160933.png";
 import { Link } from "react-router-dom";
 
-function NavBar() {
+function NavBar({ userper }) {
   return (
     <div className="navbar">
       <Link to={"/"}>
@@ -27,7 +27,13 @@ function NavBar() {
             Diputados
           </Link>
         </li>
-        <li>Perfil</li>
+        {userper && (
+          <li>
+            <Link to="/perfil" onClick={() => setMenu("perfil")}>
+              Perfil
+            </Link>
+          </li>
+        )}
       </ul>
     </div>
   );
