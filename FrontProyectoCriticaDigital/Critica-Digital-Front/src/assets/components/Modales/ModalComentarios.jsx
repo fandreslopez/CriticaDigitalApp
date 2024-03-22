@@ -3,11 +3,7 @@ import "./ModalCuenta.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-function ModalComentarios({
-  isComentariosOpen,
-  onComentarioClose,
-  idComentarios,
-}) {
+function ModalComentarios({ isComentariosOpen, idComentarios }) {
   const [comentarios, setComentarios] = useState([]);
   useEffect(() => {
     if (isComentariosOpen) {
@@ -24,14 +20,15 @@ function ModalComentarios({
       {isComentariosOpen && (
         <div className="perfilDiputado">
           <div className="informacionDiputado">
-            <div className="comentarios">
-              <h1>Comentarios</h1>
+            <div className="containerPostit">
               {comentarios.map((comentariosDiputados, index) => (
-                <p key={index}>
-                  Usuario: Anónimo
-                  <br />
-                  Comentario: {comentariosDiputados.comentarios}
-                </p>
+                <div key={index} className="post-it">
+                  <h1>Usuario: Anónimo </h1>
+                  <p>{comentariosDiputados.comentarios}</p>
+                  <div className="botonreporte">
+                    <button className="reporte">!</button>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
